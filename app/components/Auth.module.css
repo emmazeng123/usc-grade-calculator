@@ -1,0 +1,113 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 22px;
+  color: #990000;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.title {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #990000;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #9a6060;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  padding: 10px 14px;
+  border: 1.5px solid #e0c8c8;
+  font-size: 14px;
+  color: #1a0000;
+  outline: none;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: #990000;
+}
+
+.submitBtn {
+  margin-top: 4px;
+  padding: 12px;
+  background: #990000;
+  color: #FFCC00;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.submitBtn:hover {
+  background: #7a0000;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.error {
+  font-size: 12px;
+  color: #cc0000;
+}
+
+.success {
+  font-size: 12px;
+  color: #1a7a3a;
+}
+
+.toggle {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #9a6060;
+  text-align: center;
+}
+
+.toggle button {
+  color: #990000;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}

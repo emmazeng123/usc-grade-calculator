@@ -1,0 +1,495 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 14px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+
+.shell {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 0 80px;
+  min-height: 100dvh;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 32px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.uscLogo {
+  height: 48px;
+  width: auto;
+}
+
+.logo {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 34px;
+  font-weight: 470;
+  letter-spacing: 0.000001em;
+  color: #990000;
+  line-height: 50px;
+}
+
+.authArea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.saveStatus {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+.userEmail {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.unsavedNote {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.authBtn {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #990000;
+  font-weight: 600;
+  background: none;
+  border: 1px solid #990000;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s;
+}
+
+.authBtn:hover {
+  background: #990000;
+  color: #FFCC00;
+}
+
+.gpaBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gpaLabel {
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+}
+
+.gpaValue {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.gpaBadge {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  border: 1px solid currentColor;
+  padding: 2px 8px;
+}
+
+/* ── tabs ── */
+.tabs {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  gap: 0;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 13px;
+  color: var(--text-dim);
+  border-right: 1px solid var(--border);
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tab:hover {
+  color: var(--text);
+  background: var(--bg-1);
+}
+
+.tabActive {
+  color: var(--accent);
+  background: var(--bg-1);
+  border-bottom-color: var(--accent);
+}
+
+.tabName {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #990000;
+}
+
+.tabGrade {
+  font-size: 11px;
+}
+
+.tabClose {
+  font-size: 15px;
+  color: #990000;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.tabClose:hover {
+  color: #cc0000;
+}
+
+.addCourseBtn {
+  padding: 12px 20px;
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+
+.addCourseBtn:hover {
+  color: var(--accent);
+}
+
+/* ── body ── */
+.body {
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.courseHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.courseName {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--accent);
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.15s;
+  font-family: inherit;
+  min-width: 0;
+  flex: 1;
+}
+
+.courseName:focus {
+  border-bottom-color: var(--border-active);
+}
+
+.courseName::placeholder {
+  color: var(--text-muted);
+}
+
+.courseGrade {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.overallGradeLabel {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.letterBadge {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  border: 1px solid;
+  padding: 3px 10px;
+}
+
+/* ── categories ── */
+.categorySection {
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #990000;
+  border-bottom: 1px solid #7a0000;
+  gap: 12px;
+}
+
+.categoryName {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: #FFCC00;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  font-family: inherit;
+  transition: border-color 0.15s;
+  min-width: 0;
+  flex: 1;
+}
+
+.categoryName:focus {
+  border-bottom-color: var(--border-active);
+}
+
+.categoryName::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.categoryMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.weightLabel {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #FFCC00;
+  text-transform: uppercase;
+}
+
+.weightInput {
+  width: 48px;
+  text-align: right;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255,204,0,0.4);
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  color: #FFCC00;
+  padding: 2px 0;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.weightInput::-webkit-outer-spin-button,
+.weightInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.weightInput:focus {
+  border-bottom-color: #FFCC00;
+  color: #FFCC00;
+}
+
+.weightPct {
+  font-size: 12px;
+  color: #FFCC00;
+}
+
+.categoryGrade {
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 52px;
+  text-align: right;
+  color: #FFCC00;
+}
+
+.delCategoryBtn {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1;
+  margin-left: 4px;
+  transition: color 0.15s;
+}
+
+.delCategoryBtn:hover {
+  color: var(--red);
+}
+
+.assignmentList {
+  padding: 0 8px 8px;
+}
+
+/* ── table ── */
+.colHeaders {
+  display: grid;
+  grid-template-columns: 90px 90px 80px 36px;
+  gap: 8px;
+  padding: 6px 16px;
+  margin-bottom: 6px;
+}
+
+.colName,
+.colNum,
+.colPct,
+.colDel {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.colNum,
+.colPct {
+  text-align: right;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 90px 90px 80px 36px;
+  gap: 8px;
+  padding: 10px 16px;
+  align-items: center;
+  background: #fff5f7;
+  border: 1.5px solid #f4b8c8;
+  border-radius: 0;
+  margin-bottom: 8px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.row:hover {
+  background: #ffedf2;
+  border-color: #e8849f;
+}
+
+.cell {
+  padding: 4px 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: #7a3a4a;
+}
+
+.cell::placeholder {
+  color: #d4a0b0;
+}
+
+.cell:focus {
+  color: #990000;
+}
+
+.cellName {
+  min-width: 0;
+}
+
+.cellNum {
+  text-align: right;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.cellNum::-webkit-outer-spin-button,
+.cellNum::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.pct {
+  font-size: 13px;
+  text-align: right;
+  font-weight: 500;
+}
+
+.delBtn {
+  font-size: 17px;
+  color: #d4a0b0;
+  text-align: center;
+  transition: color 0.15s;
+  line-height: 1;
+}
+
+.delBtn:hover:not(:disabled) {
+  color: #cc0000;
+}
+
+.delBtn:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+/* ── add category ── */
+.addCategoryBtn {
+  margin-top: 4px;
+  padding: 10px 0;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+
+.addCategoryBtn:hover {
+  color: var(--accent);
+}
+
+.weightError {
+  margin-top: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
+/* ── add row ── */
+.addRowBtn {
+  margin-top: 12px;
+  align-self: flex-start;
+  padding: 8px 0;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+
+.addRowBtn:hover {
+  color: var(--accent);
+}
